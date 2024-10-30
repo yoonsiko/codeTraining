@@ -2,7 +2,7 @@ import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const initialState = {
   counter: 0,
-  showCounter: true
+  showCounter: true,
 };
 
 // With Redux toolkit
@@ -25,12 +25,34 @@ const counterSlice = createSlice({
   }
 });
 
+const initialAuthState = {
+  isAuthenticated: false
+}
+
+const authSlice = createSlice({
+  name: 'authentication',
+  initialState: initialAuthState,
+  reducers: {
+    login(state) {
+      state.isAuthenticated = true;
+    },
+    logout(state) {
+      state.isAuthenticated = false;
+    }
+  }
+
+})
+
 const store = configureStore({
-  //reducer: {counter: counterSlice.reducer} // If we have multiple reducers, wrap all reducers from multiple slicers to one object
-  reducer: counterSlice.reducer,
+  reducer: {
+    counter: counterSlice.reducer,
+    auth: authSlice.reducer
+  } // If we have multiple reducers, wrap all reducers from multiple slicers to one object
+  //reducer: counterSlice.reducer, // If we have a single reducer
 })
 
 export const counterActions = counterSlice.actions
+export const authActions = authSlice.actions
 
 // Without Redux Toolkit
 /* import { createStore } from 'redux';
