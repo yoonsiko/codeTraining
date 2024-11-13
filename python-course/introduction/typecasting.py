@@ -5,10 +5,13 @@ age = 25
 gpa = 3.2
 isStudent = True
 
-#print(type(age))
+# print(type(age))
 
-#gpa = int(gpa)
-#print(gpa)
+# gpa = int(gpa)
+# print(gpa)
 
-age = float(age)
-print(age)
+# age = float(age)
+# print(age)
+
+# age = str(age)
+# name = bool(name)

@@ -13,7 +13,7 @@ price = 10.99
 # print(f"The price is {price}")
 
 # Boolean
-isStudent = False
+isStudent = True
 
 if isStudent: 
     print("You are a student")
