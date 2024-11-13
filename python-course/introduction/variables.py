@@ -9,13 +9,13 @@ quantity = 33
 # print(f"You are buying {quantity} items")
 
 # Float
-price = 10.99 
+price = 10.99
 # print(f"The price is {price}")
 
 # Boolean
 isStudent = True
 
-if isStudent: 
+if isStudent:
     print("You are a student")
 else:
     print("You are not a student")
