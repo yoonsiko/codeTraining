@@ -19,6 +19,7 @@ function ErrorPage() {
       <MainNavigation />
       <PageContent title={title}>
         <p>{message}</p>
+        <p>{error.status}</p>
       </PageContent>
     </>
   );
